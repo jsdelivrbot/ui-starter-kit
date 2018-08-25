@@ -5,7 +5,8 @@ description: jsFiddle demo hosted on Github using HTML Request to get Ajax data
 authors:
   - UIMAX
 resources:
-  - demo.css
+  - /js/empty.js
+  - /css/normalize.css
 normalize_css: no
 lang_css: SCSS
 ...
