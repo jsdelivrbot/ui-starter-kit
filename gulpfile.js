@@ -1,4 +1,4 @@
-/*global require*/
+// Global require
 "use strict";
 
 var gulp = require('gulp'),
@@ -11,17 +11,16 @@ var gulp = require('gulp'),
   notify = require("gulp-notify"),
   images = require('gulp-image');
 
-/*
- * Directories here
- */
+// Directories here
 var paths = {
   public: './public/',
+  publicExamples: './public/examples/',
   sass: './src/assets/sass/',
   css: './public/assets/css/',
   scripts:  './src/assets/js/**/*.js',
   data: './src/_data/',
   images: [
-        './src/assets/images/**/*'
+    './src/assets/images/**/*'
   ],
 };
 
@@ -31,9 +30,6 @@ var paths = {
  */
 gulp.task('pug', function () {
   return gulp.src('./src/*.pug')
-    .pipe(data(function (file) {
-      return require(paths.data + path.basename(file.path) + '.json');
-    }))
     .pipe(pug({
       pretty: true
     }))
@@ -43,13 +39,24 @@ gulp.task('pug', function () {
     })
     .pipe(gulp.dest(paths.public));
 });
+gulp.task('example', function () {
+  return gulp.src('./src/examples/**/*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .on('error', function (err) {
+      process.stderr.write(err.message + '\n');
+      this.emit('end');
+    })
+    .pipe(gulp.dest(paths.publicExamples));
+});
 
 
 
 /**
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'pug', 'scripts','copy', 'images'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'example', 'scripts','copy', 'images'], function () {
   browserSync({
     server: {
       baseDir: paths.public
@@ -78,36 +85,35 @@ gulp.task('sass', function () {
       stream: true
     }));
 });
-/**
- * Build Script
- *
- */
+
+// Build Script
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
-        .pipe(gulp.dest('./public/assets/js/'))
-        .pipe(notify({ message: 'scripts built' }))
-        .pipe(browserSync.reload({
-          stream: true
-        }));;
+      .pipe(gulp.dest('./public/assets/js/'))
+      .pipe(notify({ message: 'Scripts built' }))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
 });
-// move & compress images
+
+// Move & compress images
 gulp.task('images', function() {
     return gulp.src(paths.images)
-        .pipe(gulp.dest('./public/assets/images/'))
-        .pipe(notify({ message: 'images built'}))
-        .pipe(browserSync.reload({
-          stream: true
-        }));;
+      .pipe(gulp.dest('./public/assets/images/'))
+      .pipe(notify({ message: 'Images built'}))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
 });
 
 gulp.task('copy', function() {
   gulp.src(['./src/assets/libs/**/*'])
-        .pipe(gulp.dest('./public/assets/libs/'))
-    gulp.src(['./src/assets/fonts/**/*'])
-        .pipe(gulp.dest('./public/assets/fonts/'))
-        .pipe(browserSync.reload({
-          stream: true
-        }));
+    .pipe(gulp.dest('./public/assets/libs/'))
+  gulp.src(['./src/assets/fonts/**/*'])
+    .pipe(gulp.dest('./public/assets/fonts/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 // compile static assets
@@ -117,7 +123,7 @@ gulp.task('statics', ['copy', 'images'], function() {
 /**
  * Recompile .pug files and live reload the browser
  */
-gulp.task('rebuild', ['sass', 'pug', 'scripts','copy', 'images'], function () {
+gulp.task('rebuild', ['sass', 'pug', 'example', 'scripts','copy', 'images'], function () {
   browserSync.reload();
 });
 /**
@@ -133,11 +139,11 @@ gulp.task('watch', function () {
 });
 
 // Build task compile sass and pug.
-gulp.task('build', ['sass', 'pug', 'scripts']);
+gulp.task('build', ['sass', 'pug', 'example', 'scripts']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync then watch
  * files for changes
  */
-gulp.task('default', ['browser-sync', 'watch', 'pug','sass']);
+gulp.task('default', ['browser-sync', 'watch', 'pug', 'example','sass']);
