@@ -58,6 +58,9 @@ gulp.task('example', function () {
  */
 gulp.task('browser-sync', ['sass', 'pug', 'example', 'scripts','copy', 'images'], function () {
   browserSync({
+    ui: {
+      port: 8888
+    },
     server: {
       baseDir: paths.public
     },
