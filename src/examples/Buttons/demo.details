@@ -4,7 +4,8 @@ description: jsFiddle demo hosted on Github using HTML Request to get Ajax data
 authors:
   - UIMAX
 resources:
-  - https://raw.githubusercontent.com/uimax/ui-starter-kit/master/public/assets/css/main.css
+- https://rawgit.com/uimax/ui-starter-kit/master/public/assets/libs/bootstrap/css/bootstrap.min.css
+- https://rawgit.com/uimax/ui-starter-kit/master/public/assets/css/main.css
 normalize_css: no
 lang_css: SCSS
 ...
