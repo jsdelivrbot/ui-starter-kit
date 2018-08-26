@@ -1,6 +1,12 @@
+/*
+*
+*   1. Include general style
+*   2. Header style
+*   3. Footer style
+*   3. Products
+*   5. Index page
+*
+*/
 body {
-  color: red;
-}
-.btn {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: green;
 }
