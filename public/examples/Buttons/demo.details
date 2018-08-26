@@ -5,6 +5,7 @@ authors:
   - UIMAX
 resources:
   - https://raw.githubusercontent.com/uimax/ui-starter-kit/master/public/assets/css/main.css
+  - https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css
 normalize_css: no
 lang_css: css
 ...
