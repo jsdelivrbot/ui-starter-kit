@@ -1,11 +1,11 @@
 ---
-name: Basic Buttons
-description: UI ELEMENTS - UI STARTER KIT - UIMAX
+name: BASIC BUTTONS
+description: ui elements - ui starter kit
 authors:
-  - UIMAX
+  - uimax
 resources:
-- https://rawgit.com/uimax/ui-starter-kit/master/public/assets/libs/bootstrap/css/bootstrap.min.css
-- https://rawgit.com/uimax/ui-starter-kit/master/public/assets/css/main.css
+  - https://rawgit.com/uimax/ui-starter-kit/master/public/assets/libs/bootstrap/css/bootstrap.min.css
+  - https://rawgit.com/uimax/ui-starter-kit/master/public/assets/css/main.css
 normalize_css: no
 lang_css: SCSS
 ...
