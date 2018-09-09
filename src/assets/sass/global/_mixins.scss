@@ -1,0 +1,64 @@
+// Table of Contents
+//
+// Color contrast
+// Gradients
+// Hover
+// Transition
+
+
+// Color contrast
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $yiq-contrasted-threshold) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
+}
+
+
+// Gradients
+@mixin gradient-bg($color) {
+  background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+}
+
+
+// Hover
+@mixin hover {
+  &:hover { @content; }
+}
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+@mixin plain-hover-focus {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+
+// Transition
+@mixin transition($transition...) {
+  transition: $transition;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

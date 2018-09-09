@@ -29,5 +29,6 @@
     "pug",
     "sass",
     "browsersync"
-  ]
+  ],
+  "dependencies": {}
 }

@@ -1,14 +1,9 @@
-/*
-*
-*   1. Include general style
-*   2. Header style
-*   3. Footer style
-*   3. Products
-*   5. Index page
-*
-*/
-@import "includes/base";
+// Table of Contents
+//
+// variables
+// mixins
+// base
 
-body {
-  color: green;
-}
+@import "global/variables";
+@import "global/mixins";
+@import "global/base";
