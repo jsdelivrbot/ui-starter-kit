@@ -6,5 +6,5 @@ authors:
 resources:
   - https://rawgit.com/uimax/ui-starter-kit/master/public/assets/css/main.css
 normalize_css: no
-lang_css: SCSS
+lang_css: CSS
 ...
