@@ -331,8 +331,8 @@ template {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  -webkit-box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.03);
-          box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 0.0625rem 0.3125rem rgba(73, 80, 87, 0.075);
+          box-shadow: 0 0.0625rem 0.3125rem rgba(73, 80, 87, 0.075);
 }
 
 .u-header-example .u-header-logo .logo-image {

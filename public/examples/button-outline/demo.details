@@ -1,0 +1,11 @@
+---
+name: BUTTON OUTLINE
+description: ui elements - ui starter kit -
+authors:
+  - uimax
+resources:
+  - https://rawgit.com/uimax/ui-starter-kit/master/public/assets/css/example.css
+  - https://rawgit.com/uimax/ui-starter-kit/master/public/examples/button-basic/demo.css
+normalize_css: no
+lang_css: CSS
+...

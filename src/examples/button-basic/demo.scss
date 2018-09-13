@@ -1,4 +1,4 @@
-// Buttons
+// Button basic
 //
 // Basic
 // Color
@@ -46,14 +46,6 @@ fieldset:disabled a.u-btn {
   @each $color, $value in $theme-colors {
     &.u-btn-#{$color} {
       @include button-variant($value, $value);
-    }
-  }
-}
-.u-btn-outline {
-  @include button-outline-variant($gray-400);    // Button outline default color
-  @each $color, $value in $theme-colors {
-    &.u-btn-#{$color} {
-      @include button-outline-variant($value);
     }
   }
 }

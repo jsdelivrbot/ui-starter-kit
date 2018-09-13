@@ -1,0 +1,17 @@
+// Button outline
+//
+// Basic
+
+// Import variables & mixins local
+@import "./mixins";
+@import "./variables";
+
+// Basic
+.u-btn-outline {
+  @include button-outline-variant($gray-400);    // Button outline default color
+}
+@each $color, $value in $theme-colors {
+  .u-btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}

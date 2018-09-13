@@ -109,14 +109,9 @@ $border-radius:               .1429rem !default;
 $border-radius-lg:            .2857rem !default;
 $border-radius-sm:            .07143rem !default;
 
-$box-shadow-sm:               0 rem(1) rem(2) rgba($black, .075) !default;
-$box-shadow:                  0 rem(4) rem(10) rgba($black, .03) !default;
-$box-shadow-lg:               0 rem(1) rem(4) rgba($black, .175) !default;
-
-$component-active-color:      $white !default;
-$component-active-bg:         $primary !default;
-
-$caret-width:                 .3em !default;
+$box-shadow-sm:               0 rem(1) rem(2) rgba($gray-700, .075) !default;
+$box-shadow:                  0 rem(1) rem(5) rgba($gray-700, .075) !default;
+$box-shadow-lg:               0 rem(1) rem(4) rgba($gray-700, .175) !default;
 
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
@@ -188,10 +183,6 @@ $hr-margin-y:                 $spacer !default;
 $input-btn-padding-y:         rem(5) !default;
 $input-btn-padding-x:         rem(10) !default;
 $input-btn-line-height:       $line-height-base !default;
-
-$input-btn-focus-width:       0 !default;
-$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
-$input-btn-focus-box-shadow:  none !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
