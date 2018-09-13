@@ -331,8 +331,8 @@ template {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  -webkit-box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.03);
+          box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.03);
 }
 
 .u-header-example .u-header-logo .logo-image {
@@ -379,4 +379,8 @@ template {
 
 .u-ex-layout .u-ex-box .u-ex-box-title span {
   font-weight: 700;
+}
+
+.u-ex-layout .u-ex-box .u-ex-box-body > .u-btn {
+  margin: 0 0.3125rem 0.625rem 0;
 }

@@ -22,11 +22,18 @@
 
   .u-ex-box {
     margin-bottom: rem(30);
+
     .u-ex-box-title {
       font-size: rem(20);
       margin-bottom: rem(10);
       span {
         font-weight: $font-weight-bold;
+      }
+    }
+
+    .u-ex-box-body {
+      > .u-btn {
+        margin: 0 rem(5) rem(10) 0;
       }
     }
   }

@@ -14,13 +14,6 @@
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  .u-btn {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
 .u-btn:focus, .u-btn.focus {
   outline: 0;
 }
@@ -352,35 +345,35 @@ fieldset:disabled a.u-btn {
 
 .u-btn.u-btn-light {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .u-btn.u-btn-light:hover {
   color: #212529;
-  background-color: #e6eaed;
-  border-color: #e6eaed;
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
 }
 
 .u-btn.u-btn-light:focus, .u-btn.u-btn-light.focus {
   color: #212529;
-  background-color: #d7dde3;
-  border-color: #d7dde3;
+  background-color: #e3e3e3;
+  border-color: #e3e3e3;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .u-btn.u-btn-light.disabled, .u-btn.u-btn-light:disabled {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .u-btn.u-btn-light:not(:disabled):not(.disabled):active, .u-btn.u-btn-light:not(:disabled):not(.disabled).active,
 .show > .u-btn.u-btn-light.dropdown-toggle {
   color: #212529;
-  background-color: #d7dde3;
-  border-color: #d7dde3;
+  background-color: #e3e3e3;
+  border-color: #e3e3e3;
 }
 
 .u-btn.u-btn-light:not(:disabled):not(.disabled):active:focus, .u-btn.u-btn-light:not(:disabled):not(.disabled).active:focus,
@@ -717,16 +710,16 @@ fieldset:disabled a.u-btn {
 }
 
 .u-btn-outline.u-btn-light {
-  color: #f8f9fa;
+  color: #fff;
   background-color: transparent;
   background-image: none;
-  border-color: #f8f9fa;
+  border-color: #fff;
 }
 
 .u-btn-outline.u-btn-light:hover {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .u-btn-outline.u-btn-light:focus, .u-btn-outline.u-btn-light.focus {
@@ -735,15 +728,15 @@ fieldset:disabled a.u-btn {
 }
 
 .u-btn-outline.u-btn-light.disabled, .u-btn-outline.u-btn-light:disabled {
-  color: #f8f9fa;
+  color: #fff;
   background-color: transparent;
 }
 
 .u-btn-outline.u-btn-light:not(:disabled):not(.disabled):active, .u-btn-outline.u-btn-light:not(:disabled):not(.disabled).active,
 .show > .u-btn-outline.u-btn-light.dropdown-toggle {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .u-btn-outline.u-btn-light:not(:disabled):not(.disabled):active:focus, .u-btn-outline.u-btn-light:not(:disabled):not(.disabled).active:focus,
