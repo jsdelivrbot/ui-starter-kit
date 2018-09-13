@@ -1,0 +1,21 @@
+// Styles
+//
+// Basic
+
+// Import variables & mixins local
+@import "./variables";
+@import "./mixins";
+
+// Basic
+.u-footer-example {
+  height: $footer-height;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $footer-background;
+
+  .u-footer-copyright {
+    font-size: rem($font-size-sm);
+  }
+}

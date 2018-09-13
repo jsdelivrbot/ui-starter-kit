@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 var paths = {
   public: './public/',
   publicExamples: './public/examples/',
-  sass: './src/assets/sass/',
+  sass: './src/assets/scss/',
   examples: './src/examples/',
   css: './public/assets/css/',
   scripts:  './src/assets/js/**/*.js',
@@ -153,8 +153,8 @@ gulp.task('rebuild', ['sass', 'sassExample', 'pug', 'pugExample', 'scripts', 'sc
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-  gulp.watch(paths.sass + '**/*.scss', ['sass']);
-  gulp.watch(paths.examples + '**/*.scss', ['sassExample']);
+  gulp.watch(paths.sass + '**/*.scss', ['sass', 'sassExample']);
+  gulp.watch(paths.examples + '**/*.scss', ['sassExample', 'sass']);
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.examples + '**/*.js', ['scriptsExample']);
   gulp.watch(paths.images, ['images']);

@@ -1,0 +1,24 @@
+// Header example
+//
+// Basic
+
+// Import variables & mixins local
+@import "./mixins";
+@import "./variables";
+
+// Basic
+.u-header-example {
+  height: $header-height;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $header-background;
+  box-shadow: $box-shadow;
+
+  .u-header-logo {
+    .logo-image {
+      width: 120px;
+    }
+  }
+}
