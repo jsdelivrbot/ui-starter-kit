@@ -314,3 +314,56 @@ template {
 [hidden] {
   display: none !important;
 }
+
+.u-header-example {
+  height: 3.75rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.03);
+          box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.03);
+}
+
+.u-header-example .u-header-logo .logo-image {
+  width: 120px;
+}
+
+.u-footer-example {
+  height: 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.u-footer-example .u-footer-copyright {
+  font-size: 0.75rem;
+}
+
+.u-layout {
+  position: relative;
+  padding: 1.875rem;
+  min-height: -webkit-calc(100vh - 3.75rem - 2.5rem);
+  min-height: calc(100vh - 3.75rem - 2.5rem);
+}

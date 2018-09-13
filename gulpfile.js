@@ -112,6 +112,13 @@ gulp.task('images', function() {
       stream: true
     }));
 });
+gulp.task('imagesExample', function() {
+  return gulp.src(paths.examples + '**/*.{gif,jpg,png,svg}')
+    .pipe(gulp.dest(paths.publicExamples))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
 
 gulp.task('copy', function() {
   gulp.src('./src/assets/libs/**/*')
@@ -124,7 +131,7 @@ gulp.task('copy', function() {
 /**
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'sassExample', 'pug', 'pugExample', 'scripts', 'scriptsExample', 'copy', 'images'], function () {
+gulp.task('browser-sync', ['sass', 'sassExample', 'pug', 'pugExample', 'scripts', 'scriptsExample', 'copy', 'images', 'imagesExample'], function () {
   browserSync({
     ui: {
       port: 8888
@@ -139,13 +146,13 @@ gulp.task('browser-sync', ['sass', 'sassExample', 'pug', 'pugExample', 'scripts'
 
 
 // compile static assets
-gulp.task('statics', ['copy', 'images'], function() {
+gulp.task('statics', ['copy', 'images', 'imagesExample'], function() {
 
 });
 /**
  * Recompile .pug files and live reload the browser
  */
-gulp.task('rebuild', ['sass', 'sassExample', 'pug', 'pugExample', 'scripts', 'scriptsExample', 'copy', 'images'], function () {
+gulp.task('rebuild', ['sass', 'sassExample', 'pug', 'pugExample', 'scripts', 'scriptsExample', 'copy', 'images', 'imagesExample'], function () {
   browserSync.reload();
 });
 /**
@@ -158,6 +165,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.examples + '**/*.js', ['scriptsExample']);
   gulp.watch(paths.images, ['images']);
+  gulp.watch(paths.examples + '**/*.{gif,jpg,png,svg}', ['imagesExample']);
   gulp.watch(paths.statics, ['copy']);
   gulp.watch(paths.examples + '**/*.details', ['copy']);
   gulp.watch('./src/**/*.pug', ['rebuild']);

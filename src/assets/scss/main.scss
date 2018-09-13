@@ -1,9 +1,22 @@
 // Table of Contents
 //
-// variables
 // mixins
+// variables
 // base
+// header
+// footer
+// layout
 
 @import "global/mixins";
 @import "global/variables";
 @import "global/base";
+
+@import "../../examples/header-example/demo";
+@import "../../examples/footer-example/demo";
+
+// layout example
+.u-layout {
+  position: relative;
+  padding: rem(30);
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+}
