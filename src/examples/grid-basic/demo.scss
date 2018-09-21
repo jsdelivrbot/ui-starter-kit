@@ -1,0 +1,37 @@
+// Styles
+//
+// Basic
+
+// Import variables & mixins local
+@import "./variables";
+@import "./mixins";
+
+// Basic
+// Container widths
+.u-container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+// Fluid container
+.u-container-fluid {
+  @include make-container();
+}
+
+// Row
+.u-row {
+  @include make-row();
+}
+.u-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .u-col,
+  > [class*="u-col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Columns
+@include make-grid-columns();

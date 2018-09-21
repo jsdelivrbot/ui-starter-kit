@@ -6,6 +6,7 @@
 // header
 // footer
 // layout example
+// grid example
 
 @import "global/mixins";
 @import "global/variables";
@@ -25,7 +26,7 @@
 
     .u-ex-box-title {
       font-size: rem(20);
-      margin-bottom: rem(10);
+      margin-bottom: rem(15);
       span {
         font-weight: $font-weight-bold;
       }
@@ -34,6 +35,23 @@
     .u-ex-box-body {
       > .u-btn {
         margin: 0 rem(3) rem(7) 0;
+      }
+    }
+  }
+}
+
+
+// grid example
+.u-ex-grid {
+  .u-row {
+    > .u-col,
+    > [class^=u-col-] {
+      > .u-ex-box {
+        text-align: center;
+        padding: rem(5);
+        margin-bottom: rem(15);
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
       }
     }
   }
