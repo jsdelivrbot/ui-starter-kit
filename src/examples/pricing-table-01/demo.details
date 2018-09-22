@@ -4,7 +4,7 @@ description: components - ui starter kit -
 authors:
   - uimax
 resources:
-  - https://cdn.rawgit.com/uimax/ui-starter-kit/c6701a20/public/assets/css/example.css
+  - https://cdn.rawgit.com/uimax/ui-starter-kit/b3e35ad7/public/assets/css/example.css
 normalize_css: no
 lang_css: CSS
 ...
