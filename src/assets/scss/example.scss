@@ -7,6 +7,7 @@
 // footer
 // layout example
 // grid example
+// icon example
 
 @import "global/mixins";
 @import "global/variables";
@@ -52,6 +53,50 @@
         margin-bottom: rem(15);
         background-color: $gray-100;
         border: 1px solid $gray-200;
+      }
+    }
+  }
+}
+
+
+// icon example
+.u-ex-icon {
+  .u-ex-box {
+    &:nth-child(2n) {
+      .u-ex-box-body {
+        > p {
+          color: $gray-900;
+        }
+      }
+    }
+
+    .u-ex-box-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > p {
+        display: flex;
+        flex-basis: 25%;
+        align-items: center;
+        cursor: pointer;
+        color: $text-muted;
+        border-radius: $border-radius;
+        @include transition($transition-base);
+
+        &:hover {
+          background-color: $gray-200;
+        }
+
+        > i {
+          font-size: rem(28);
+          width: rem(45);
+          height: rem(45);
+          line-height: rem(45);
+          text-align: center;
+          margin-right: rem(10);
+        }
       }
     }
   }

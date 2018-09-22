@@ -393,3 +393,59 @@ template {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
 }
+
+.u-ex-icon .u-ex-box:nth-child(2n) .u-ex-box-body > p {
+  color: #212529;
+}
+
+.u-ex-icon .u-ex-box .u-ex-box-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.u-ex-icon .u-ex-box .u-ex-box-body > p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: #6c757d;
+  -webkit-border-radius: 0.125rem;
+          border-radius: 0.125rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.u-ex-icon .u-ex-box .u-ex-box-body > p:hover {
+  background-color: #e9ecef;
+}
+
+.u-ex-icon .u-ex-box .u-ex-box-body > p > i {
+  font-size: 1.75rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  line-height: 2.8125rem;
+  text-align: center;
+  margin-right: 0.625rem;
+}
