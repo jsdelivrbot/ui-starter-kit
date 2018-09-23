@@ -5,6 +5,7 @@
 // Gradients
 // Hover
 // Transition
+// Border radius
 // Ascending
 // Starts at zero
 // Breakpoints
@@ -73,9 +74,11 @@
 
 
 // Transition
-@mixin transition($transition...) {
-  transition: $transition;
-}
+@import "mixins/transition";
+
+
+// Border radius
+@import "mixins/border-radius";
 
 
 // Ascending

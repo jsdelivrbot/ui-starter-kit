@@ -1,0 +1,136 @@
+.u-alert {
+  position: relative;
+  padding: 0.75rem 1.125rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  -webkit-border-radius: 0.125rem;
+          border-radius: 0.125rem;
+}
+
+.u-alert-heading {
+  color: inherit;
+}
+
+.u-alert-link {
+  font-weight: 700;
+}
+
+.u-alert-dismissible {
+  padding-right: 1.125rem;
+}
+
+.u-alert-dismissible .u-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 1.125rem;
+  color: inherit;
+}
+
+.u-alert-default {
+  color: #212529;
+  background-color: #e9ecef;
+  border-color: #e9ecef;
+}
+
+.u-alert-primary {
+  color: #fff;
+  background-color: #5a65b1;
+  border-color: #5a65b1;
+}
+
+.u-alert-secondary {
+  color: #fff;
+  background-color: #47586F;
+  border-color: #47586F;
+}
+
+.u-alert-success {
+  color: #fff;
+  background-color: #2EA4A8;
+  border-color: #2EA4A8;
+}
+
+.u-alert-info {
+  color: #fff;
+  background-color: #5894d2;
+  border-color: #5894d2;
+}
+
+.u-alert-warning {
+  color: #212529;
+  background-color: #FFB14A;
+  border-color: #FFB14A;
+}
+
+.u-alert-danger {
+  color: #fff;
+  background-color: #E5404C;
+  border-color: #E5404C;
+}
+
+.u-alert-light {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.u-alert-dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.u-alert-fill-color-default {
+  color: #e9ecef;
+  background-color: white;
+  border-color: white;
+}
+
+.u-alert-fill-color-primary {
+  color: #5a65b1;
+  background-color: #e5e6f2;
+  border-color: #7d85c1;
+}
+
+.u-alert-fill-color-secondary {
+  color: #47586F;
+  background-color: #b3bfcf;
+  border-color: #5b718e;
+}
+
+.u-alert-fill-color-success {
+  color: #2EA4A8;
+  background-color: #b7eaeb;
+  border-color: #3fc6ca;
+}
+
+.u-alert-fill-color-info {
+  color: #5894d2;
+  background-color: #f9fbfd;
+  border-color: #80aedd;
+}
+
+.u-alert-fill-color-warning {
+  color: #FFB14A;
+  background-color: white;
+  border-color: #ffc77d;
+}
+
+.u-alert-fill-color-danger {
+  color: #E5404C;
+  background-color: #fdf4f4;
+  border-color: #eb6d76;
+}
+
+.u-alert-fill-color-light {
+  color: #fff;
+  background-color: white;
+  border-color: white;
+}
+
+.u-alert-fill-color-dark {
+  color: #343a40;
+  background-color: #96a0aa;
+  border-color: #4b545c;
+}

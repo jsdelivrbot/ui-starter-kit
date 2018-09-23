@@ -1,13 +1,12 @@
 // Styles
 //
-// Basic
+// Base
 
 // Import variables & mixins local
 @import "./variables";
 @import "./mixins";
 
-// Basic
-// Container widths
+// Base
 .u-container {
   @include make-container();
   @include make-container-max-widths();

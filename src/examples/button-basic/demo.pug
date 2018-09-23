@@ -3,31 +3,23 @@
     .u-ex-box-title <span>Button</span> basic
     .u-ex-box-body
       // BEGIN DEMO
-      button.u-btn(type="button") Default
-      button.u-btn.u-btn-primary(type="button") Primary
-      button.u-btn.u-btn-secondary(type="button") Secondary
-      button.u-btn.u-btn-success(type="button") Success
-      button.u-btn.u-btn-danger(type="button") Danger
-      button.u-btn.u-btn-warning(type="button") Warning
-      button.u-btn.u-btn-info(type="button") Info
-      button.u-btn.u-btn-light(type="button") Light
-      button.u-btn.u-btn-dark(type="button") Dark
-      button.u-btn.u-btn-link(type="button") Link
+      include ./_includes/button-basic.pug
       // END DEMO
   .u-ex-box
-    .u-ex-box-title <span>Button</span> disabled
+    .u-ex-box-title <span>Button</span> icon
     .u-ex-box-body
       // BEGIN DEMO
-      button.u-btn(type="button" disabled) Default
-      button.u-btn.u-btn-primary(type="button" disabled) Primary
+      include ./_includes/button-icon.pug
       // END DEMO
   .u-ex-box
     .u-ex-box-title <span>Button</span> size
     .u-ex-box-body
       // BEGIN DEMO
-      button.u-btn.u-btn-lg(type="button") Large Default
-      button.u-btn.u-btn-primary.u-btn-lg(type="button") Large Primary
-      br
-      button.u-btn.u-btn-sm(type="button") Small Default
-      button.u-btn.u-btn-primary.u-btn-sm(type="button") Small Primary
+      include ./_includes/button-size.pug
+      // END DEMO
+  .u-ex-box
+    .u-ex-box-title <span>Button</span> disabled
+    .u-ex-box-body
+      // BEGIN DEMO
+      include ./_includes/button-disabled.pug
       // END DEMO

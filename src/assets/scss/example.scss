@@ -39,6 +39,32 @@
       }
     }
   }
+
+  // Layout 2 columns
+  &.u-ex-layout-2-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+
+    .u-ex-box {
+      flex-basis: 50%;
+      padding: rem(30);
+    }
+  }
+
+  // Layout 3 columns
+  &.u-ex-layout-3-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+
+    .u-ex-box {
+      flex-basis: 33.333333%;
+      padding: rem(30);
+    }
+  }
 }
 
 

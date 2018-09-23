@@ -1,15 +1,16 @@
 // Button basic
 //
-// Basic
+// Base
 // Color
 // Link buttons
 // Size
+// Button icon
 
 // Import variables & mixins local
 @import "./mixins";
 @import "./variables";
 
-// Basic
+// Base
 .u-btn {
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -85,4 +86,52 @@ fieldset:disabled a.u-btn {
 }
 .u-btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+
+// Button icon
+.u-btn-icon {
+  padding: 0;
+
+  > i {
+    font-size: 1rem;
+    font-weight: $font-weight-normal;
+    line-height: 1.4;
+    display: inline-block;
+    vertical-align: middle;
+    padding: rem(5) $btn-padding-x;
+
+    + span {
+      display: inline-block;
+      vertical-align: middle;
+      padding: $btn-padding-y $btn-padding-x $btn-padding-y 0;
+    }
+  }
+
+  > span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: $btn-padding-y 0 $btn-padding-y $btn-padding-x;
+  }
+
+  &.u-btn-lg {
+    > i {
+      font-size: rem(20);
+    }
+  }
+
+  &.u-btn-sm {
+    > i {
+      font-size: rem(16);
+      padding: rem(2) $btn-padding-x-sm;
+
+      + span {
+        padding: $btn-padding-y-sm $btn-padding-x-sm $btn-padding-y-sm 0;
+      }
+    }
+
+    > span {
+      padding: $btn-padding-y-sm 0 $btn-padding-y-sm $btn-padding-x-sm;
+    }
+  }
 }

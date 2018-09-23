@@ -1,0 +1,21 @@
+// Mixins
+//
+// Variants
+// Variants fill color
+
+// Import mixins global
+@import "../../assets/scss/global/mixins";
+
+
+// Variants
+@mixin alert-variant($background, $border, $color) {
+  color: color-yiq($background);
+  background-color: $background;
+  border-color: $border;
+}
+// Variants fill color
+@mixin alert-fill-color-variant($background, $border, $color) {
+  color: $color;
+  background-color: lighten($background, 40%);
+  border-color: lighten($background, 10%);
+}

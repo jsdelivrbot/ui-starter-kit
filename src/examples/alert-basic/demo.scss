@@ -1,0 +1,50 @@
+// Alert basic
+//
+// Base
+// Color
+// Color fill
+
+// Import variables & mixins local
+@import "./mixins";
+@import "./variables";
+
+// Base
+.u-alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+}
+.u-alert-heading {
+  color: inherit;
+}
+.u-alert-link {
+  font-weight: $alert-link-font-weight;
+}
+.u-alert-dismissible {
+  padding-right: $alert-padding-x;
+
+  .u-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $alert-padding-y $alert-padding-x;
+    color: inherit;
+  }
+}
+
+
+// Color
+@each $color, $value in $theme-colors {
+  .u-alert-#{$color} {
+    @include alert-variant($value, $value, $value);
+  }
+}
+
+// Color fill
+@each $color, $value in $theme-colors {
+  .u-alert-fill-color-#{$color} {
+    @include alert-fill-color-variant($value, $value, $value);
+  }
+}
