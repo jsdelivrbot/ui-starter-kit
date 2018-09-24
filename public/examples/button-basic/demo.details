@@ -4,7 +4,7 @@ description: ui elements - ui starter kit -
 authors:
   - uimax
 resources:
-  - https://cdn.rawgit.com/uimax/ui-starter-kit/b3e35ad7/public/assets/css/example.css
+  - https://rawcdn.githack.com/uimax/ui-starter-kit/master/public/assets/css/example.css
   - https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css
 normalize_css: no
 lang_css: CSS

@@ -13,6 +13,7 @@
     "browser-sync": "^2.9.3",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
+    "gulp-clean": "^0.4.0",
     "gulp-data": "^1.2.0",
     "gulp-image": "^4.3.0",
     "gulp-notify": "^3.2.0",

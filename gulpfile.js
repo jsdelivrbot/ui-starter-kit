@@ -9,7 +9,8 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   browserSync = require('browser-sync'),
   notify = require("gulp-notify"),
-  images = require('gulp-image');
+  images = require('gulp-image'),
+  clean = require('gulp-clean');
 
 // Directories here
 var paths = {
@@ -24,6 +25,13 @@ var paths = {
     './src/assets/images/**/*'
   ],
 };
+
+
+// Clean output directory
+gulp.task('clean-html-example', function() {
+  return gulp.src(paths.publicExamples + '**/*.html', { read: false })
+    .pipe(clean());
+});
 
 /**
  * Compile .pug files and pass in data from json file
@@ -40,7 +48,7 @@ gulp.task('pug', function () {
     })
     .pipe(gulp.dest(paths.public));
 });
-gulp.task('pugExample', function () {
+gulp.task('pugExample', ['clean-html-example'], function () {
   return gulp.src('./src/examples/**/*.pug')
     .pipe(pug({
       pretty: true
